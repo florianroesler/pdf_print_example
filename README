@@ -1,0 +1,4 @@
+# How to start the server
+1. Install Docker and docker-compose on your machine
+2. Execute `docker-compose up`
+3. In your browser navigate to http://localhost:8080 to see the page.
