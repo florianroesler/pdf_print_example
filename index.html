@@ -9,9 +9,14 @@
     <h1>This is my header</h1>
     <div>
       <p>Please print this part as a PDF</p>
-      <p id="ignorePDF" style="color: red;">This should not be included in the PDF</p>
       <p>This is an overly long text section. It should wrap over a line so that you can see how it looks when transformed to PDF. Man, you really have to find words to fill this line... it is exhausting!</p>
+
+
+      <input type="text" value="Inputs are omitted by default" />
+      <p id="ignorePDF" style="color: red;">This should not be included in the PDF through our id based element handler.</p>
     </div>
+
+    <hr />
     <button id="print_to_pdf">Print to PDF</button>
   </div>
 </body>
@@ -37,4 +42,3 @@
   }
 </script>
 </html>
-s
