@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.min.css" />
+  <script src="/scripts/html2pdf.bundle.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>html2pdf Example</h1>
+    <div>
+      <p>Please print this part as a PDF</p>
+      <p>This is an overly long text section. It should wrap over a line so that you can see how it looks when transformed to PDF. Man, you really have to find words to fill this line... it is exhausting!</p>
+
+      <input type="text" value="Even Inputs are printed in this mode" />
+      <p id="ignorePDF" style="color: red;">Beautiful and colorful text as well...</p>
+    </div>
+
+    <hr />
+    <button id="print_to_pdf">Print to PDF</button>
+  </div>
+</body>
+
+<script>
+  var button = document.getElementById('print_to_pdf')
+  button.onclick = function () {
+    var element = document.getElementsByTagName('body')[0]
+    html2pdf().from(element).toPdf().save('my_document.pdf')
+  }
+</script>
+</html>
