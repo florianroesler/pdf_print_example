@@ -13,6 +13,8 @@
 
       <input type="text" value="Even Inputs are printed in this mode" />
       <p id="ignorePDF" style="color: red;">Beautiful and colorful text as well...</p>
+
+      <img src="/images/qrcode.png" alt="This is a QR Code" />
     </div>
 
     <hr />
@@ -23,8 +25,8 @@
 <script>
   var button = document.getElementById('print_to_pdf')
   button.onclick = function () {
-    var element = document.getElementsByTagName('body')[0]
-    html2pdf().from(element).toPdf().save('my_document.pdf')
+    var source = document.body
+    html2pdf().from(source).toPdf().save('my_document.pdf')
   }
 </script>
 </html>

@@ -21,8 +21,7 @@
 </body>
 
 <script>
-  var button = document.getElementById('print_to_pdf')
-  button.onclick = function () {
+  document.getElementById('print_to_pdf').onclick = function () {
     var doc = new jsPDF()
     var elementHandler = {
       '#ignorePDF': function (_element, _renderer) {
@@ -30,11 +29,11 @@
       }
     }
 
-    var source = window.document.getElementsByTagName('body')[0]
+    var source = document.body
     doc.fromHTML(source, 15, 15,
     {
-      'width': 180,
-      'elementHandlers': elementHandler
+      width: 180,
+      elementHandlers: elementHandler
     })
 
     doc.save('my_document.pdf')
